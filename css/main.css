@@ -90,6 +90,121 @@ textarea {
 
 
 
+/*----------  Responsive embed  ----------*/
+.img-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+.img-wrap img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  border: 0;
+  transition: all 800ms ease;
+}
+.img-16by9::before {padding-top: 56.25%; }
+.img-4by3::before  {padding-top: 75%; }
+.img-3by4::before  {padding-top: 133.33%; }
+.img-1by1::before  {padding-top: 100%; }
+
+/*----------  Container  ----------*/
+.container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  transition: all 300ms ease;
+}
+.container::before {
+  display: table;
+  content: ""
+}
+.container::after {
+  display: table;
+  clear: both;
+  content: ""
+}
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+    max-width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+    max-width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+    max-width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+    max-width: 100%;
+  }
+}
+
+
+/*----------  grids  ----------*/
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px
+}
+.row::before {
+  display: table;
+  content: ""
+}
+.row::after {
+  display: table;
+  clear: both;
+  content: ""
+}
+.column,
+.single-column {
+  padding: 15px;
+}
+.one-eighth {width:33.33%;}
+@media (min-width: 576px) {
+  .column        {float: left }
+  .one-half      {width: 100% }
+  .one-third     {width: 100% }
+  .one-fourth    {width: 50%  }
+  .one-fifth     {width: 50%  }
+  .one-sixth     {width: 33.33%}
+  .two-sixth     {width: 66.66%}
+  .one-eighth    {width: 25%}
+}
+@media (min-width: 768px){
+  .one-third     {width: 50% }
+  .one-fourth    {width: 50% }
+  .one-fifth     {width: 33.333333% }
+  .one-eighth    {width: 16.66%}
+}
+@media (min-width: 992px){
+  .one-half      {width: 50% }
+  .one-third     {width: 33.333333% }
+  .two-thirds    {width: 66.666667% }
+  .one-fourth    {width: 25% }
+  .three-fourths {width: 75% }
+  .one-fifth     {width: 20% }
+  .four-fifths   {width: 80% }
+  .one-sixth     {width: 16.66%}
+  .two-sixth     {width: 33.32%}
+  .one-eighth    {width: 12.5%}
+}
 
 
 
