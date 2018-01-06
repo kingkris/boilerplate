@@ -98,7 +98,8 @@ textarea {
   padding: 0;
   overflow: hidden;
 }
-.img-wrap img {
+.img-wrap img,
+.img-wrap .iframe {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -107,6 +108,7 @@ textarea {
   height: auto;
   border: 0;
   transition: all 800ms ease;
+  border: solid 1px red;
 }
 .img-16by9::before {padding-top: 56.25%; }
 .img-4by3::before  {padding-top: 75%; }
@@ -208,7 +210,8 @@ textarea {
 
 
 
-
+.bg-lightgreen{background-color: lightgreen;padding: 10px}
+.bg-lightblue{background-color: lightblue;padding: 10px}
 
 
 
